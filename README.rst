@@ -43,7 +43,6 @@ Der Spider ``sendungen`` wird dann aufgerufen, um die Liste der vorhandenen
 Sendungen zu erhalten.  Die Liste wird, wieder als JSON-Datei, in das
 aktuelle Verzeichnis exportiert.::
 
-    (venv) $ cd ../scrapy
     (venv) $ ./get_sendungen.sh
 
 Dann wird die Liste ``sendungen.json`` von der Web-Applikation verwendet, um
