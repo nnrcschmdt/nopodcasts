@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Sendungen</title>
+</head>
+
+<body>
+
+{% for sendereihe, sendungen in sendereihen.items() %}
+    <h2>{{ sendereihe }}</h2>
+    <dl>
+        {% for sendung in sendungen %}
+            <dt>{{ sendung.datum_uhrzeit }}</dt>
+            <dd><a href="{{ sendereihe }}/{{ sendung.datei }}">{{ sendung.titel }}</a></dd>
+        {% endfor %}
+    </dl>
+{% endfor %}
+
+</body>
+</html>
