@@ -1,3 +1,5 @@
 #!/bin/bash
 
-flask import_sendereihen
+source venv/bin/activate
+
+FLASK_APP=app.py flask import_sendereihen

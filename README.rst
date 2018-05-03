@@ -36,7 +36,6 @@ Verzeichnisstruktur unter ``sendungen`` zu erzeugen, wo sie abegelgt werden.
 Die gekürzte Liste der Sendereihen, wird in das aktuelle Verzeichnis
 abgelegt::
 
-    (venv) $ export FLASK_APP=app.py
     (venv) $ ./import_sendereihen.sh
 
 Der Spider ``sendungen`` wird dann aufgerufen, um die Liste der vorhandenen
@@ -54,7 +53,7 @@ Die Web-Applikation enthält dann alle Sendungen, die für die jeweilige
 Sendereihen herunter geladen wurden und am Web-Browser angehört werden
 können::
 
-    (venv) $ flask run
+    (venv) $ ./run.sh
      * Serving Flask app "app"
      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
