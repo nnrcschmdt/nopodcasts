@@ -36,7 +36,7 @@ def get_sendungen():
             sendungen = []
 
             for dateiname in dateienamen:
-                match = re.match(r'(?P<titel>\w.+)-(?P<datum>\d{4}-\d{2}-\d{2})_(?P<hh>\d{2})(?P<mm>\d{2})\w*', dateiname)
+                match = re.match(r'(?P<titel>\S.+)-(?P<datum>\d{4}-\d{2}-\d{2})_(?P<hh>\d{2})(?P<mm>\d{2})\w*', dateiname)
                 if match:
                     titel = match.group('titel')
                     datum = match.group('datum')
@@ -51,7 +51,8 @@ def get_sendungen():
 
             sendungen.sort(key=lambda s: s['datum_uhrzeit'])
 
-        sendereihen[verzeichnis] = reversed(sendungen)
+        if len(sendungen) > 0:
+            sendereihen[verzeichnis] = reversed(sendungen)
 
     return render_template('sendungen.html', sendereihen=sendereihen)
 
