@@ -92,7 +92,7 @@ def download_sendungen():
         sendungen_in.sort(key=lambda s: s['sendereihe'])
 
         with chdir('sendungen'):
-            options = {'quiet': False, 'download_archive': 'sendungen.txt'}
+            options = {'quiet': False, 'nopart': True, 'download_archive': 'sendungen.txt'}
 
             with youtube_dl.YoutubeDL(options) as youtubeDL:
                 for sendung in sendungen_in:
