@@ -45,7 +45,7 @@ def get_sendungen():
                     datum_uhrzeit = datetime.strptime('%s %s:%s' % (datum, hh, mm), '%Y-%m-%d %H:%M')
                     if datetime.now() - datum_uhrzeit < timedelta(days=7):
                         sendungen.append(
-                            {'titel': titel, 'datum_uhrzeit': datum_uhrzeit.strftime('%d.%m.%Y %H:%M'), 'datei': dateiname})
+                            {'titel': titel, 'datum_uhrzeit': datum_uhrzeit.strftime('%Y-%m-%d %H:%M'), 'datei': dateiname})
                     else:
                         os.remove(dateiname)
 
