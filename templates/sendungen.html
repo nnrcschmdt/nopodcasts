@@ -11,7 +11,7 @@
     <dl>
         {% for sendung in sendungen %}
             <dt>{{ sendung.datum_uhrzeit }}</dt>
-            <dd><a href="{{ sendereihe }}/{{ sendung.datei }}">{{ sendung.titel }}</a></dd>
+            <dd><a href="{{ sendereihe }}/{{ sendung.datei|urlencode }}">{{ sendung.titel }}</a></dd>
         {% endfor %}
     </dl>
 {% endfor %}
