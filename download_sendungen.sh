@@ -2,4 +2,4 @@
 
 source venv/bin/activate
 
-FLASK_APP=app.py flask download_sendungen
+FLASK_APP=app.py flask download-sendungen

@@ -2,4 +2,4 @@
 
 source venv/bin/activate
 
-FLASK_APP=app.py flask import_sendereihen
+FLASK_APP=app.py flask import-sendereihen
