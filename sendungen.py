@@ -13,7 +13,7 @@ class SendungenSpider(scrapy.Spider):
 
     def parse(self, response):
         sendereihe = response.request.url.split('/')[-1]
-        for sendung in response.css('div.accordionSubContent > div.accordionSubItem'):
+        for sendung in response.css('div.accordionSubItem'):
             url = sendung.css('a.infoButton7Tage::attr(href)').extract_first()
 
             if url:
