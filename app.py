@@ -97,4 +97,7 @@ def download_sendungen():
             with youtube_dl.YoutubeDL(options) as youtubeDL:
                 for sendung in sendungen_in:
                     with chdir(sendung['sendereihe']):
-                        youtubeDL.download([sendung['url']])
+                        try:
+                            youtubeDL.download([sendung['url']])
+                        except Exception:
+                            pass
